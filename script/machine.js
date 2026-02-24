@@ -106,7 +106,10 @@ rejectedFilterBtn.addEventListener("click", function () {
 // delegation
 cardsContainer.addEventListener("click", function (e) {
   //  Interview Button
-  if (e.target.classList.contains("btn-interview")) {
+  if (
+    e.target.classList.contains("btn-interview") ||
+    e.target.closest(".btn-interview")
+  ) {
     const card = e.target.closest(".job-card");
     const company = card.getElementsByTagName("h2")[0].innerText;
 
@@ -128,7 +131,10 @@ cardsContainer.addEventListener("click", function (e) {
   }
 
   // rejected btn
-  else if (e.target.classList.contains("btn-rejected")) {
+  else if (
+    e.target.classList.contains("btn-rejected") ||
+    e.target.closest(".btn-rejected")
+  ) {
     const card = e.target.closest(".job-card");
     const company = card.getElementsByTagName("h2")[0].innerText;
 
@@ -150,7 +156,10 @@ cardsContainer.addEventListener("click", function (e) {
   }
 
   // delete btn
-  else if (e.target.classList.contains("btn-delete")) {
+  else if (
+    e.target.classList.contains("btn-delete") ||
+    e.target.closest(".btn-delete")
+  ) {
     const card = e.target.closest(".job-card");
     const company = card.getElementsByTagName("h2")[0].innerText;
 
