@@ -21,7 +21,7 @@ function calculateCount() {
   rejectedCountEl.innerText = rejectedList.length;
 
   if (currentFilter === "all") {
-    countDisplay.innerText = totalCards;
+    countDisplay.innerText = allCards.length; 
   } else if (currentFilter === "interview") {
     countDisplay.innerText = interviewList.length;
   } else if (currentFilter === "rejected") {
